@@ -14,10 +14,10 @@ public class Main {
       var cx= DriverManager.getConnection(url);
       //var reponse = cx.prepareStatement("SELECT nom FROM Journaliste");
       System.out.println("connecté");
-
+      System.out.println("lire journaliste à partir de son ID");
       Statement statement=cx.createStatement();
       //recuperation et affichage en fonction de l'id du journaliste
-      ResultSet resultset= statement.executeQuery("SELECT * FROM Journaliste WHERE id=1");
+      ResultSet resultset= statement.executeQuery("SELECT nom, credit FROM Journaliste WHERE id=1");
       ResultSetMetaData resultSetMetaData= resultset.getMetaData();
 
       //On affiche le nom des colonnes
@@ -32,23 +32,33 @@ public class Main {
       resultset.close();
       statement.close();
 ///////////////////////////////////////
-    /*  Statement statement2=cx.createStatement();
+      System.out.println(" \n lire une news à partir de son ID : ");
+      Statement statement2=cx.createStatement();
       //recuperation et affichage du journaliste en fonction de son id
-      ResultSet resultset2= statement2.executeQuery("SELECT * FROM Journaliste WHERE id=1");
+      ResultSet resultset2= statement2.executeQuery("SELECT titre, contenu FROM News WHERE id=1");
       ResultSetMetaData resultSetMetaData2= resultset2.getMetaData();
 
-      //On affiche le nom des colonnes
-      for(int i = 1; i <= resultSetMetaData2.getColumnCount(); i++)
-        System.out.print("\t" + resultSetMetaData2.getColumnName(i).toUpperCase() + "\t " + "\n");
-
-      while(resultset2.next()){
+     while(resultset2.next()){
         for(int i = 1; i <= resultSetMetaData2.getColumnCount(); i++)
           System.out.print("\t" + resultset2.getObject(i).toString() + "\t |");
       }
       resultset2.close();
       statement2.close();
 
-*/
+      ///////////////////////////////////////
+      System.out.println(" \n lire une news à partir de son ID : ");
+      Statement statement3=cx.createStatement();
+      //recuperation et affichage du journaliste en fonction de son id
+      ResultSet resultset3= statement3.executeQuery("SELECT News.titre, News.contenu , Journaliste.nom FROM News INNER JOIN Journaliste ON News.journaliste=Journaliste.Id WHERE News.Id=1");
+      ResultSetMetaData resultSetMetaData3= resultset3.getMetaData();
+
+      while(resultset3.next()){
+        for(int i = 1; i <= resultSetMetaData3.getColumnCount(); i++)
+          System.out.print("\t" + resultset3.getObject(i).toString() + "\t |");
+      }
+      resultset3.close();
+      statement3.close();
+
 
     } catch (ClassNotFoundException | SQLException e) {
       e.printStackTrace();
