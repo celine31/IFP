@@ -46,7 +46,7 @@ public class Main {
       statement2.close();
 
       ///////////////////////////////////////
-      System.out.println(" \n lire une news à partir de son ID : ");
+      System.out.println(" \n lire une news à partir de son ID et en affichant le nom du journaliste : ");
       Statement statement3=cx.createStatement();
       //recuperation et affichage du journaliste en fonction de son id
       ResultSet resultset3= statement3.executeQuery("SELECT News.titre, News.contenu , Journaliste.nom FROM News INNER JOIN Journaliste ON News.journaliste=Journaliste.Id WHERE News.Id=1");
@@ -58,6 +58,15 @@ public class Main {
       }
       resultset3.close();
       statement3.close();
+      ///////////////////////////////////////////
+      System.out.println("\n lire une news en récupérant ses tags");
+      PreparedStatement statement4 = cx.prepareStatement("SELECT News.titre, News.contenu, Tag.nom FROM News INNER JOIN NewsTag ON News.Id= NewsTag.IdNews INNER JOIN Tag ON NewsTag.IdTag = Tag.Id WHERE News.Id=1");
+      ResultSet rs =statement4.executeQuery();
+
+      while(rs.next()){
+       System.out.print( "titre de l'article : " + rs.getString("titre") + ", contenu de l'article : " + rs.getString ("contenu") + ", nom du tag : " + rs.getString("nom"));
+      }
+      statement4.close();
 
 
     } catch (ClassNotFoundException | SQLException e) {
