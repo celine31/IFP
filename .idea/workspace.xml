@@ -2,38 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="586f4f8b-27ec-4754-b9b3-cefeac23f0fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Ajout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Connection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/db/derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/ifp_db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/ifp_db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/ifp_db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/ifp_db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c101.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c111.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c121.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c130.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c141.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c150.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c161.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c171.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c171.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c200.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c200.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c211.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c211.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c221.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c221.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c230.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c31.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c400.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c400.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c41.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c411.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c411.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c421.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c421.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c71.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/ca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/cb1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/cf0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c4b0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c4b0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c4c1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c4c1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/ifp_db/seg0/c4d1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/ifp_db/seg0/c4d1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IFP/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IFP/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
