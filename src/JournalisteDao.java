@@ -1,10 +1,8 @@
 import java.sql.*;
 
 public class JournalisteDao {
-
+//reporter vide
   private ConnectionManager cm;
-  //reporter vide
-
 
   public JournalisteDao() {
     this.cm = new ConnectionManager();
@@ -21,11 +19,14 @@ public class JournalisteDao {
       ResultSet resultset = statement.executeQuery("SELECT nom, credit FROM Journaliste WHERE id=1");
       ResultSetMetaData resultSetMetaData = resultset.getMetaData();
 
-        if (resultset.getRow() == 1) {
-          System.out.print("\t" + resultset.getRowId(1).toString() + "\t |");
-        }
-     resultset.close();
-     statement.close();
+      while(resultset.next()){
+        for(int i = 1; i <= resultSetMetaData.getColumnCount(); i++)
+          System.out.print("\t" + resultset.getObject(i).toString() + "\t |");
+      }
+        resultset.close();
+        statement.close();
+
+
 
 ///////////////////////////////////////
       System.out.println(" \n lire une news à partir de son ID : ");
