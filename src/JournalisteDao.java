@@ -1,32 +1,31 @@
 import java.sql.*;
 
 public class JournalisteDao {
-//reporter vide
+
   private ConnectionManager cm;
+  //reporter vide
+
 
   public JournalisteDao() {
     this.cm = new ConnectionManager();
   }
  // public journaliste readById(int reporterId) {}
 
-  public void connecter(){
-    try{
-      var cx= cm.getConnection();
+  public void connecter() {
+    try {
+      var cx = cm.getConnection();
       System.out.println("connecté");
       System.out.println("lire journaliste à partir de son ID");
-      Statement statement=cx.createStatement();
+      Statement statement = cx.createStatement();
       //recuperation et affichage en fonction de l'id du journaliste
-      ResultSet resultset= statement.executeQuery("SELECT nom, credit FROM Journaliste WHERE id=1");
-      ResultSetMetaData resultSetMetaData= resultset.getMetaData();
+      ResultSet resultset = statement.executeQuery("SELECT nom, credit FROM Journaliste WHERE id=1");
+      ResultSetMetaData resultSetMetaData = resultset.getMetaData();
 
-     //if resultsert null
-      while(resultset.next()){
-        for(int i = 1; i <= resultSetMetaData.getColumnCount(); i++)
-          System.out.print("\t" + resultset.getObject(i).toString() + "\t |");
-      }
-
-      resultset.close();
-      statement.close();
+        if (resultset.getRow() == 1) {
+          System.out.print("\t" + resultset.getRowId(1).toString() + "\t |");
+        }
+     resultset.close();
+     statement.close();
 
 ///////////////////////////////////////
       System.out.println(" \n lire une news à partir de son ID : ");
