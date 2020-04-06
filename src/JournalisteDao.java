@@ -1,13 +1,17 @@
 import java.sql.*;
 
-public class Connection {
+public class JournalisteDao {
+//reporter vide
+  private ConnectionManager cm;
+
+  public JournalisteDao() {
+    this.cm = new ConnectionManager();
+  }
+ // public journaliste readById(int reporterId) {}
+
   public void connecter(){
     try{
-      String url="jdbc:derby:db/ifp_db";
-      Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-      System.out.println("driver ok");
-      var cx= DriverManager.getConnection(url);
-      //var reponse = cx.prepareStatement("SELECT nom FROM Journaliste");
+      var cx= cm.getConnection();
       System.out.println("connecté");
       System.out.println("lire journaliste à partir de son ID");
       Statement statement=cx.createStatement();
@@ -15,10 +19,7 @@ public class Connection {
       ResultSet resultset= statement.executeQuery("SELECT nom, credit FROM Journaliste WHERE id=1");
       ResultSetMetaData resultSetMetaData= resultset.getMetaData();
 
-      //On affiche le nom des colonnes
-     /* for(int i = 1; i <= resultSetMetaData.getColumnCount(); i++)
-        System.out.print("\t" + resultSetMetaData.getColumnName(i).toUpperCase() + "\t " + "\n");*/
-
+     //if resultsert null
       while(resultset.next()){
         for(int i = 1; i <= resultSetMetaData.getColumnCount(); i++)
           System.out.print("\t" + resultset.getObject(i).toString() + "\t |");
@@ -26,6 +27,7 @@ public class Connection {
 
       resultset.close();
       statement.close();
+
 ///////////////////////////////////////
       System.out.println(" \n lire une news à partir de son ID : ");
       Statement statement2=cx.createStatement();
@@ -62,7 +64,7 @@ public class Connection {
         System.out.print( "titre de l'article : " + rs.getString("titre") + ", contenu de l'article : " + rs.getString ("contenu") + ", nom du tag : " + rs.getString("nom"));
       }
       statement4.close();
-    } catch (ClassNotFoundException | SQLException e) {
+    } catch (SQLException e) {
       e.printStackTrace();
 
     }
